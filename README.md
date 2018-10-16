@@ -1,2 +1,1 @@
-# elec-facebook
-Electron : Facebook
+# Electron : Facebook

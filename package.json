@@ -1,0 +1,52 @@
+{
+  "name": "elec-facebook",
+  "version": "0.0.1",
+  "description": "Electron : Facebook",
+  "homepage": "https://facebook.com/sgnls/elec-facebook",
+  "keywords": [
+    "facebook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@facebook.com/sgnls/elec-facebook.git"
+  },
+  "author": "Matt Hill <desk@sgnls.net>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "start": "electron ./app",
+    "start-debug": "WEB_DEBUG=1 electron --disable-http-cache ./app",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-builder": "^13.11.1"
+  },
+  "build": {
+    "appId": "elec-facebook",
+    "asar": false,
+    "linux": {
+      "category": "Network;Chat;Social",
+      "packageCategory": "net",
+      "executableName": "facebook",
+      "synopsis": "Facebook (Electron)",
+      "description": "Facebook for Linux via Electron.",
+      "desktop": {
+        "Name": "facebook",
+        "Comment": "Facebook for Linux via Electron.",
+        "StartupWMClass": "facebook"
+      },
+      "target": [
+        "tar.gz",
+        "deb",
+        "rpm",
+        "pacman"
+      ]
+    }
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://facebook.com/sgnls/elec-facebook/issues"
+  },
+  "main": "index.js"
+}
